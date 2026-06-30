@@ -446,7 +446,7 @@
 
                 <li><a href="BranchAdmin_Notifications.php"><i class="bi bi-bell-fill"></i><span>Notifications</span></a></li>
 
-                <li><a href="#"><i class="bi bi-gear-fill"></i><span>Settings</span></a></li>
+                <li><a href="BranchAdmin_Settings.php"><i class="bi bi-gear-fill"></i><span>Settings</span></a></li>
 
             </ul>
 

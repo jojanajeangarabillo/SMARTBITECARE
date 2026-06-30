@@ -106,42 +106,109 @@
     }
 
         /* =========================================
-            MAIN CONTENT STYLES 
+           NEW MAIN CONTENT STYLES
            ========================================= */
         .content-wrapper {
             padding: 28px 35px 40px 35px;
         }
 
-        .page-header {
+        .page-header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:5px;
+        }
+
+        .header-left{
+            display:flex;
+            align-items:center;
+            gap:15px;
+        }
+
+        /* Search Box */
+        .search-box{
             display: flex;
-            justify-content: flex-end;
             align-items: center;
-            margin-bottom: 24px;
+            background: white;
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            padding: 8px 18px;
+            width: 300px;
         }
 
+        .search-box i{
+            color: var(--primary);
+            font-size: 18px;
+            margin-right: 10px;
+        }
 
-        .btn-add-user {
-            background: var(--primary);
+        .search-box input{
             border: none;
-            padding: 10px 24px;
-            font-weight: 600;
-            font-size: 15px;
-            border-radius: 8px;
-            color: #fff;
-            transition: background 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            outline: none;
+            background: transparent;
+            color: black;
+            width: 100%;
+            font-size: 14px;
         }
 
-        .btn-add-user:hover {
+        .search-box input::placeholder{
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        /*=========================
+        EXPORT DROPDOWN
+        =========================*/
+
+        .btn-filter{
+            background: var(--primary);
+            color: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-weight: 600;
+            transition: .2s;
+        }
+
+        .btn-filter:hover,
+        .btn-filter:focus,
+        .btn-filter:active,
+        .btn-filter.show{
             background: #1f2d6e;
             color: #fff;
+            border-color: #1f2d6e;
+            box-shadow: none;
         }
 
-        .btn-add-user i {
-            font-size: 18px;
+        .btn-filter i{
+            margin-right: 8px;
         }
+
+        .report-dropdown{
+            width:260px;
+            border:1px solid #d9dee8;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+            padding:10px;
+        }
+
+        .report-dropdown .dropdown-item{
+            padding:12px 15px;
+            border-radius:8px;
+            font-weight:600;
+            display:flex;
+            align-items:center;
+            gap:12px;
+        }
+
+        .report-dropdown .dropdown-item:hover{
+            background:#f3f5fb;
+        }
+
+        .report-dropdown i{
+            color:var(--primary);
+            font-size:18px;
+        }
+
 
         /* Table Card */
         .table-card {
@@ -175,40 +242,6 @@
 
         .table-card .table tbody tr:hover {
             background: #f8faff;
-        }
-
-        /* status badges */
-        .badge-status {
-            font-weight: 600;
-            font-size: 12px;
-            padding: 5px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.2px;
-        }
-
-        .badge-active {
-            background: #dff0e6;
-            color: #0f7b3a;
-        }
-
-        .badge-inactive {
-            background: #f1f2f6;
-            color: #6b7280;
-        }
-
-        /* action icon */
-        .action-icon {
-            color: var(--primary);
-            font-size: 20px;
-            opacity: 0.7;
-            transition: opacity 0.2s, transform 0.15s;
-            cursor: default;
-            display: inline-block;
-        }
-
-        .action-icon:hover {
-            opacity: 1;
-            transform: scale(1.1);
         }
 
         /* pagination */
@@ -254,72 +287,6 @@
         .pagination-wrap .page-item:last-child .page-link {
             font-size: 16px;
             padding: 8px 12px;
-        }
-
-        /* quick actions card */
-        .quick-actions-card {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e9edf4;
-            padding: 22px 28px;
-            margin-top: 28px;
-        }
-
-        .quick-actions-card .qa-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 0 0 14px 0;
-            letter-spacing: 0.2px;
-        }
-
-        .quick-actions-card .qa-title i {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-
-        .qa-btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .qa-btn-group .btn-qa {
-            background: #F21D2F;
-            border: none;
-            padding: 9px 22px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 13px;
-            color: white;
-            transition: background 0.2s, transform 0.15s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .qa-btn-group .btn-qa i {
-            font-size: 16px;
-            color: white;
-        }
-
-        .qa-btn-group .btn-qa:hover {
-            background:#2B3A8C;
-            transform: translateY(-1px);
-        }
-
-        .qa-btn-group .btn-qa.btn-qa-primary {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        .qa-btn-group .btn-qa.btn-qa-primary i {
-            color: #fff;
-        }
-
-        .qa-btn-group .btn-qa.btn-qa-primary:hover {
-            background: #1f2d6e;
         }
 
         /* responsive tweaks */
@@ -386,7 +353,7 @@
             }
         }
 
-        /* topbar profile dropdown tweak */
+        /* topbar profile dropdown */
         .admin-profile {
             font-weight: 700;
             color: var(--primary);
@@ -433,7 +400,7 @@
 
                 <li><a href="BranchAdmin_Dashboard.php"><i class="bi bi-grid-fill"></i><span>Dashboard</span></a></li>
 
-                <li><a class="active" href="BranchAdmin_UserManagement.php"><i class="bi bi-people-fill"></i><span>User Management</span></a></li>
+                <li><a href="BranchAdmin_UserManagement.php"><i class="bi bi-people-fill"></i><span>User Management</span></a></li>
 
                 <li><a href="BranchAdmin_PatientMonitoring.php"><i class="bi bi-heart-pulse-fill"></i><span>Patient Monitoring</span></a></li>
 
@@ -443,7 +410,7 @@
 
                 <li><a href="BranchAdmin_Reports.php"><i class="bi bi-file-earmark-bar-graph-fill"></i><span>Reports</span></a></li>
 
-                <li><a href="BranchAdmin_AuditLogs.php"><i class="bi bi-clock-history"></i><span>Audit Logs</span></a></li>
+                <li><a class="active" href="BranchAdmin_AuditLogs.php"><i class="bi bi-clock-history"></i><span>Audit Logs</span></a></li>
 
                 <li><a href="BranchAdmin_Notifications.php"><i class="bi bi-bell-fill"></i><span>Notifications</span></a></li>
 
@@ -461,26 +428,86 @@
 
     </div>
 
-    <!-- MAIN CONTENT   -->
+    <!-- MAIN CONTENT -->
 
     <div class="main">
 
-        <!-- Top Header-->
-
+        <!-- Top Header -->
 
         <div class="topbar">
-            <h3>Users</h3>
+            <h3>Audit Logs</h3>
             <div class="profile"> ADMIN <i class="bi bi-caret-down-fill"></i> </div>
         </div>
 
         <div class="content-wrapper">
 
-            <!-- Add User button row -->
-            <div class="page-header">
-                <button class="btn btn-add-user">
-                    <i class="bi bi-person-plus"></i> Add User
-                </button>
-            </div>
+           
+<div class="page-header">
+
+    <!-- Left Side -->
+    <div class="header-left">
+
+        <!-- Search -->
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search Logs...">
+        </div>
+
+        <!-- Filter -->
+        <div class="dropdown">
+            <button class="btn btn-filter dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown">
+
+                <i class="bi bi-funnel"></i>
+                Filters
+            </button>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Date</a></li>
+                <li><a class="dropdown-item" href="#">Module</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">User</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="dropdown">
+
+        <button class="btn btn-filter dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown">
+
+            <i class="bi bi-file-earmark-arrow-down-fill"></i>
+            Export
+
+        </button>
+
+        <ul class="dropdown-menu report-dropdown">
+
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-filetype-csv"></i>
+                    CSV
+                </a>
+            </li>
+
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="bi bi-filetype-pdf"></i>
+                    PDF
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+        </div>
 
             <!-- Table -->
             <div class="table-card">
@@ -488,40 +515,40 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Role</th>
-                                <th>Status</th>
+                                <th>Log ID</th>
+                                <th>User ID</th>
+                                <th>Branch ID</th>
+                                <th>Module</th>
+                                <th>Created_at</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>John Doe</td>
-                                <td>Admin Staff</td>
-                                <td><span class="badge-status badge-active">Active</span></td>
-                                <td>
-                                    <i class="bi bi-pencil-square action-icon"></i>
-                                    <i class="bi bi-trash3-fill action-icon"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jane Smith</td>
-                                <td>Nurse</td>
-                                <td><span class="badge-status badge-inactive">Inactive</span></td>
-                                <td>
-                                    <i class="bi bi-pencil-square action-icon"></i>
-                                    <i class="bi bi-trash3-fill action-icon"></i>
-                                </td>
-                            </tr>
+                        <tr>
+                                <td>0001</td>
+                                <td>SBI-0006</td>
+                                <td>SBICAINTA-070625</td>
+                                <td>Inventory</td>
+                                <td>06-30-26 10:30 AM</td>
+                                <td>Update</td>
+                         
+                        </tr>
+                             <tr>
+                                <td>0001</td>
+                                <td>SBI-0006</td>
+                                <td>SBICAINTA-070625</td>
+                                <td>Inventory</td>
+                                <td>06-30-26 10:30 AM</td>
+                                <td>Update</td>
+                         
+                        </tr>
+
+                            
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            
             <!-- Pagination -->
             <div class="pagination-wrap">
                 <nav aria-label="User table pagination">
@@ -548,24 +575,8 @@
                 </nav>
             </div>
 
-            <!-- Quick Actions -->
-            <div class="quick-actions-card">
-                <div class="qa-title">
-                    <i class="bi bi-lightning-fill"></i> Quick Actions
-                </div>
-                <div class="qa-btn-group">
-                    <button class="btn-qa"><i class="bi bi-person-plus"></i> Add Nurse</button>
-                    <button class="btn-qa"><i class="bi bi-person-plus"></i> Add Admin Staff</button>
-                    <button class="btn-qa"><i class="bi bi-person-plus"></i> Add Inventory Officer</button>
-                    <button class="btn-qa"><i class="bi bi-key"></i> Reset Password</button>
-                </div>
-            </div>
-
-        </div>
 
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>

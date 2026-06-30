@@ -112,13 +112,50 @@
             padding: 28px 35px 40px 35px;
         }
 
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            gap: 20px;
-        }
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:25px;
+    }
+
+    .header-left{
+        display:flex;
+        align-items:center;
+        gap:15px;
+    }
+
+    .btn-readall{
+
+        background:#198754;
+
+        color:#fff;
+
+        border:none;
+
+        border-radius:8px;
+
+        padding:10px 18px;
+
+        font-weight:600;
+
+        transition:.2s;
+
+    }
+
+    .btn-readall:hover{
+
+        background:#157347;
+
+        color:#fff;
+
+    }
+
+    .btn-readall i{
+
+        margin-right:8px;
+
+    }
 
         /* Search Box */
         .search-box{
@@ -150,97 +187,220 @@
             color: rgba(0, 0, 0, 0.85);
         }
 
-        /* Filter */
-        .btn-filter {
+        /*=========================
+        EXPORT DROPDOWN
+        =========================*/
+
+        .btn-filter{
             background: var(--primary);
-            border: none;
-            padding: 10px 24px;
-            font-weight: 600;
-            font-size: 15px;
-            border-radius: 8px;
             color: #fff;
-            transition: background 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-weight: 600;
+            transition: .2s;
         }
 
-        .btn-filter:hover {
+        .btn-filter:hover,
+        .btn-filter:focus,
+        .btn-filter:active,
+        .btn-filter.show{
             background: #1f2d6e;
             color: #fff;
+            border-color: #1f2d6e;
+            box-shadow: none;
         }
 
-        .btn-filter i {
-            font-size: 18px;
+        .btn-filter i{
+            margin-right: 8px;
         }
 
-        /* Table Card */
-        .table-card {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            overflow: hidden;
+        .report-dropdown{
+            width:260px;
+            border:1px solid #d9dee8;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,.15);
+            padding:10px;
         }
 
-        .table-card .table {
-            margin: 0;
-            border: 1px solid #d9dee8;
+        .report-dropdown .dropdown-item{
+            padding:12px 15px;
+            border-radius:8px;
+            font-weight:600;
+            display:flex;
+            align-items:center;
+            gap:12px;
         }
 
-        .table-card .table thead th {
-            background: var(--primary);
-            color: #fff;
-            padding: 16px 20px;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            border-bottom: 2px solid #e9edf4;
+        .report-dropdown .dropdown-item:hover{
+            background:#f3f5fb;
         }
 
-        .table-card .table tbody td {
-            padding: 14px 20px;
-            color: #1e293b;
-            border-bottom: 1px solid #f0f2f7;
+        .report-dropdown i{
+            color:var(--primary);
+            font-size:18px;
         }
 
-        .table-card .table tbody tr:hover {
-            background: #f8faff;
+        /*=========================
+        NOTIFICATIONS
+        =========================*/
+
+        .notification-day{
+            margin:25px 0 15px;
         }
 
-        /* status badges */
-        .badge-status {
-            font-weight: 600;
-            font-size: 12px;
-            padding: 5px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.2px;
+        .notification-day h5{
+            color:var(--primary);
+            font-weight:700;
+        }
+        .notification-section{
+
+            width:100%;
+
+            margin-top:25px;
         }
 
-        .badge-active {
-            background: #dff0e6;
-            color: #0f7b3a;
+        .notification-card{
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            width:100%;
+
+            background:#fff;
+            border:1px solid #e8ebf3;
+            border-radius:12px;
+
+            padding:20px;
+
+            margin-bottom:18px;}
+
+        .notification-card:hover{
+
+            box-shadow:0 5px 20px rgba(0,0,0,.08);
+
         }
 
-        .badge-inactive {
-            background: #f1f2f6;
-            color: #6b7280;
+        .notification-icon{
+
+            width:65px;
+            height:65px;
+
+            border-radius:50%;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            font-size:28px;
+
+            margin-right:20px;
+
+            flex-shrink:0;
+
         }
 
-        /* action icon */
-        .action-icon {
-            color: var(--primary);
-            font-size: 20px;
-            opacity: 0.7;
-            transition: opacity 0.2s, transform 0.15s;
-            cursor: default;
-            display: inline-block;
+        .notification-icon.danger{
+
+            background:#fdecec;
+
+            color:#dc3545;
+
         }
 
-        .action-icon:hover {
-            opacity: 1;
-            transform: scale(1.1);
+        .notification-icon.warning{
+
+            background:#fff4dd;
+
+            color:#f59e0b;
+
         }
+
+        .notification-icon.expire{
+
+            background:#fff8e6;
+
+            color:#ff9800;
+
+        }
+
+        .notification-content{
+
+            flex:1;
+
+        }
+
+        .notification-content h6{
+
+            font-size:18px;
+
+            font-weight:700;
+
+            color:#222;
+
+            margin-bottom:6px;
+
+        }
+
+        .notification-content p{
+
+            margin-bottom:6px;
+
+            color:#555;
+
+        }
+
+        .notification-content small{
+
+            color:#999;
+
+        }
+
+        .notification-right{
+
+            display:flex;
+
+            flex-direction:column;
+
+            align-items:flex-end;
+
+            gap:10px;
+
+        }
+
+        .btn-view{
+
+            background:var(--primary);
+
+            color:#fff;
+
+            border:none;
+
+            padding:8px 18px;
+
+            border-radius:8px;
+
+            font-size:14px;
+
+            font-weight:600;
+
+        }
+
+        .btn-view:hover{
+
+            background:#1f2d6e;
+
+            color:#fff;
+
+        }
+
+        .unread{
+
+            border-left:5px solid #dc3545;
+
+        }
+    
 
         /* pagination */
         .pagination-wrap {
@@ -304,11 +464,6 @@
                 width: 100%;
             }
 
-            .table-card .table thead th,
-            .table-card .table tbody td {
-                padding: 12px 14px;
-                font-size: 13px;
-            }
 
             .quick-actions-card {
                 padding: 18px 18px;
@@ -327,15 +482,6 @@
         }
 
         @media (max-width: 576px) {
-            .table-card .table thead th {
-                font-size: 11px;
-                padding: 10px 10px;
-            }
-
-            .table-card .table tbody td {
-                font-size: 12px;
-                padding: 10px 10px;
-            }
 
             .badge-status {
                 font-size: 10px;
@@ -400,7 +546,7 @@
 
                 <li><a href="BranchAdmin_UserManagement.php"><i class="bi bi-people-fill"></i><span>User Management</span></a></li>
 
-                <li><a class="active" href="BranchAdmin_PatientMonitoring.php"><i class="bi bi-heart-pulse-fill"></i><span>Patient Monitoring</span></a></li>
+                <li><a href="BranchAdmin_PatientMonitoring.php"><i class="bi bi-heart-pulse-fill"></i><span>Patient Monitoring</span></a></li>
 
                 <li><a href="BranchAdmin_MedicalSupplies.php"><i class="bi bi-box-seam"></i><span>Medical Supplies</span></a></li>
 
@@ -410,7 +556,7 @@
 
                 <li><a href="BranchAdmin_AuditLogs.php"><i class="bi bi-clock-history"></i><span>Audit Logs</span></a></li>
 
-                <li><a href="BranchAdmin_Notifications.php"><i class="bi bi-bell-fill"></i><span>Notifications</span></a></li>
+                <li><a class="active" href="BranchAdmin_Notifications.php"><i class="bi bi-bell-fill"></i><span>Notifications</span></a></li>
 
                 <li><a href="BranchAdmin_Settings.php"><i class="bi bi-gear-fill"></i><span>Settings</span></a></li>
 
@@ -432,67 +578,170 @@
 
         <!-- Top Header -->
 
-
         <div class="topbar">
-            <h3>Patient Monitoring</h3>
+            <h3>Notifications</h3>
             <div class="profile"> ADMIN <i class="bi bi-caret-down-fill"></i> </div>
         </div>
 
         <div class="content-wrapper">
 
-            <!-- Filter -->
-            <div class="page-header">
+           
+<div class="page-header">
 
-                   <!-- Search Bar -->
-            <div class="search-box">
-                <i class="bi bi-search"></i>
-                <input type="text" placeholder="Search Patient...">
-            </div>
+    <div class="header-left">
 
-            <button class="btn btn-filter">
-                <i class="bi bi-funnel"></i> Filter Patients
+        <!-- Search -->
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search Notifications...">
+        </div>
+
+        <!-- Filter -->
+        <div class="dropdown">
+            <button class="btn btn-filter dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown">
+
+                <i class="bi bi-funnel"></i>
+                Filters
+
             </button>
 
-            </div>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Unread</a></li>
+                <li><a class="dropdown-item" href="#">Read</a></li>
+                <li><a class="dropdown-item" href="#">Low Stock</a></li>
+                <li><a class="dropdown-item" href="#">Prediction</a></li>
+                <li><a class="dropdown-item" href="#">Expiring Vaccine</a></li>
+            </ul>
+        </div>
 
-            <!-- Table -->
-            <div class="table-card">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Patient Name</th>
-                                <th>Date of Admission</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                         <tr>
-                                <td>1</td>
-                                <td>John Doe</td>
-                                <td>2026-01-15</td>
-                                <td><span class="badge-status badge-active">Completed</span></td>
-                                <td>
-                                    <i class="bi bi-eye action-icon"></i>
-                                </td>
-                          </tr>
+    </div>
 
-                           <tr>
-                                <td>1</td>
-                                <td>Jane Smith</td>
-                                <td>2026-06-30</td>
-                                <td><span class="badge-status badge-inactive">On Going</span></td>
-                                <td>
-                                    <i class="bi bi-eye action-icon"></i>
-                                </td>
-                          </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <!-- Right Side -->
+    <button class="btn btn-readall">
+        <i class="bi bi-check2-all"></i>
+        Mark All as Read
+    </button>
+
+</div>
+
+<!-- Notifications -->
+
+<div class="notification-section">
+
+    <div class="notification-day">
+        <h5>Today</h5>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-card unread">
+
+        <div class="notification-icon danger">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+        </div>
+
+        <div class="notification-content">
+            <h6>Low Stock Alert</h6>
+            <p>Rabies Vaccine (Speeda) has only <strong>8 stocks</strong> remaining.</p>
+
+            <small>10:30 AM</small>
+        </div>
+
+        <div class="notification-right">
+
+            <span class="badge bg-danger">Unread</span>
+
+            <button class="btn btn-view">
+                View Inventory
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-card unread">
+
+        <div class="notification-icon warning">
+            <i class="bi bi-graph-up-arrow"></i>
+        </div>
+
+        <div class="notification-content">
+            <h6>Prediction Alert</h6>
+            <p>XGBoost predicts vaccine shortage within the next 14 days.</p>
+
+            <small>09:45 AM</small>
+        </div>
+
+        <div class="notification-right">
+
+            <span class="badge bg-warning text-dark">Unread</span>
+
+            <button class="btn btn-view">
+                View Prediction
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-card">
+
+        <div class="notification-icon expire">
+            <i class="bi bi-calendar-event-fill"></i>
+        </div>
+
+        <div class="notification-content">
+            <h6>Expiring Vaccine Alert</h6>
+            <p>Verorab Vaccine will expire in <strong>15 days</strong>.</p>
+
+            <small>08:15 AM</small>
+        </div>
+
+        <div class="notification-right">
+
+            <span class="badge bg-success">Read</span>
+
+            <button class="btn btn-view">
+                View Inventory
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="notification-day mt-4">
+        <h5>Yesterday</h5>
+    </div>
+
+    <div class="notification-card">
+
+        <div class="notification-icon danger">
+            <i class="bi bi-exclamation-circle-fill"></i>
+        </div>
+
+        <div class="notification-content">
+            <h6>Low Stock Alert</h6>
+            <p>Syringes have reached the minimum stock level.</p>
+
+            <small>Yesterday • 3:20 PM</small>
+        </div>
+
+        <div class="notification-right">
+
+            <span class="badge bg-success">Read</span>
+
+            <button class="btn btn-view">
+                View Inventory
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
             <!-- Pagination -->
             <div class="pagination-wrap">
@@ -522,9 +771,6 @@
 
 
     </div>
-  
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
